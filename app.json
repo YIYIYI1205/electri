@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/all/all",
+    "pages/search/search",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电子硬件助手",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#09bb07",
+    "borderStyle": "black" ,
+    "list": [
+      {
+        "selectedIconPath": "images/indexSelect.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "助手"
+      },
+      {
+        "selectedIconPath": "images/allSelect.png",
+        "iconPath": "images/all.png",
+        "pagePath": "pages/all/all",
+        "text": "宝库"
+      },
+      {
+        "selectedIconPath": "images/searchSelect.png",
+        "iconPath": "images/search.png",
+        "pagePath": "pages/search/search",
+        "text": "探索"
+      },
+      {
+        "selectedIconPath": "images/mySelect.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+
+    ],
+
+    "borderStyle": "white"
+
+  }
+}
