@@ -1,0 +1,59 @@
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.content_all{
+	display: flex;
+}
+.left{
+	width: 30%;
+	overflow: scroll;
+}
+.left_item{
+	text-align: center;
+	padding: 20rpx 0;
+}
+.active{
+	color: #09bb07;
+	background: white;
+	border-right: 1px solid #09bb07;
+}
+.right{
+	width: 70%;
+	background: white;
+	padding:20rpx;
+}
+.down{
+	display: flex;
+	flex-wrap: wrap;
+}
+.title{
+	
+	
+}
+/*
+.commonUse{
+	display: flex;
+	flex-wrap: wrap;
+}*/
+.content{
+	width: 40%;
+	border: 1px solid #aaa;
+	margin: 20rpx;
+	text-align: center;
+}
+.content .image{
+	padding-top: 10rpx;
+	width: 100rpx;
+	height: 100rpx;
+}
+.describe{
+	font-size: 25rpx;
+	color: #aaa;
+}

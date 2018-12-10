@@ -1,3 +1,6 @@
+page{
+	background: #eee;
+}
 .searchbar-result{
     margin-top: 0;
     font-size: 14px;
@@ -12,20 +15,25 @@
 	text-align: center;
 }
 .swiper_common{
+	padding-top: 20rpx;
 	border: 1px solid #aaa;
-	margin: 0 auto;
+	margin: 0rpx auto 40rpx;
+	background: white;
+	box-shadow: 10px 10px 5px #888888;
 }
 .commonUse{
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: 10rpx;
 }
 .content{
 	text-align: center;
 	width: 23%;
-	margin:7rpx; 
+	margin:5rpx; 
 	border: 1px solid #aaa;
 }
 .content .image{
+	padding-top: 10rpx;
 	width: 100rpx;
 	height: 100rpx;
 }

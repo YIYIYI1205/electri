@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    imgheights:0,
     inputShowed: false,
     inputVal: "",
     commonUse1:[
@@ -49,8 +50,18 @@ Page({
     ]
   },  
     onLoad:function(){
-    
-    
+        var _this=this;
+        var query = wx.createSelectorQuery();
+        var height=0;
+        query.select('.content').boundingClientRect();
+        query.exec(function (res) {
+          //res就是 所有标签为mjltest的元素的信息 的数组
+          console.log(res);
+          //取高度
+          console.log(res[0].height);
+          var height=res[0].height*2+40
+          _this.setData({imgheights:height})
+        })
     },
     showInput: function () {
         this.setData({

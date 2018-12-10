@@ -43,7 +43,7 @@
 	<!-- 常用 轮播方式 -->
 	<view class="swiper_common">
 		<view class="title_big">常用</view>
-		<swiper indicator-dots="true" style="height: 290px;">
+		<swiper indicator-dots="true" style="height:{{imgheights}}px;">
 	    	<swiper-item>
 	      		<view class="commonUse">
 	      			<block wx:for="{{commonUse1}}">
@@ -93,7 +93,7 @@
 	<!-- 最近 -->
 	<view class="swiper_common">
 		<view class="title_big">最近</view>
-		<swiper indicator-dots="true" style="height: 290px;">
+		<swiper indicator-dots="true" style="height:{{imgheights}}px;">
 	    	<swiper-item>
 	      		<view class="commonUse">
 	      			<block wx:for="{{commonUse1}}">

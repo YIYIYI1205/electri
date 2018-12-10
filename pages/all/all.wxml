@@ -1,1 +1,101 @@
-<view>all页面</view>
+<view class="page">
+	<!-- 搜索框 -->
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <!-- <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view> -->
+    </view>
+    <!-- 内容 -->
+    <!-- <view class="commonUse">
+    	<block wx:for="{{all}}">
+    		<view class="content">		
+	      		<image class="image" src="{{item.img}}"></image>
+	      		<view class="name">{{item.name}}</view>
+	      		<view class="describe">{{item.describe}}</view>
+	      	</view>
+    	</block>	
+    </view> -->
+    <view class="content_all">
+        <view class="left">
+            <scroll-view scroll-y="true" style="height: {{height}}px">
+                <view class="left_item {{_id==1?'active':''}}" bindtap="change" data-id="1" data-title="工具资料">工具资料</view>
+                <view class="left_item {{_id==2?'active':''}}" bindtap="change" data-id="2" data-title="通用用途">通用用途</view>
+                <view class="left_item {{_id==3?'active':''}}" bindtap="change" data-id="3" data-title="分立器件">分立器件</view>
+                <view class="left_item {{_id==4?'active':''}}" bindtap="change" data-id="4" data-title="分立器件">模拟IC</view>
+                <view class="left_item {{_id==5?'active':''}}" bindtap="change" data-id="5" data-title="分立器件">连接器</view>
+                <view class="left_item {{_id==6?'active':''}}" bindtap="change" data-id="6" data-title="分立器件">数字IC</view>
+                <view class="left_item {{_id==7?'active':''}}" bindtap="change" data-id="7" data-title="分立器件">PCB</view>
+                <view class="left_item {{_id==8?'active':''}}" bindtap="change" data-id="8" data-title="分立器件">传感器</view>
+                <view class="left_item {{_id==9?'active':''}}" bindtap="change" data-id="9" data-title="分立器件">通信模块</view>
+                <view class="left_item {{_id==10?'active':''}}" bindtap="change" data-id="10" data-title="分立器件">无源</view>
+                <view class="left_item {{_id==11?'active':''}}" bindtap="change" data-id="11" data-title="分立器件">电源</view>
+                <view class="left_item {{_id==12?'active':''}}" bindtap="change" data-id="12" data-title="分立器件">射频</view>
+                <view class="left_item {{_id==13?'active':''}}" bindtap="change" data-id="13" data-title="分立器件">电机</view>
+                <view class="left_item {{_id==14?'active':''}}" bindtap="change" data-id="14" data-title="分立器件">测量/单位</view>
+                <view class="left_item {{_id==15?'active':''}}" bindtap="change" data-id="15" data-title="分立器件">学术知识体系</view>
+                <view class="left_item {{_id==16?'active':''}}" bindtap="change" data-id="16" data-title="分立器件">电路基础</view>
+                <view class="left_item {{_id==17?'active':''}}" bindtap="change" data-id="17" data-title="分立器件">模拟电路</view>
+                <view class="left_item {{_id==18?'active':''}}" bindtap="change" data-id="18" data-title="分立器件">电磁场</view>
+                <view class="left_item {{_id==19?'active':''}}" bindtap="change" data-id="19" data-title="分立器件">物理</view>
+                <view class="left_item {{_id==20?'active':''}}" bindtap="change" data-id="20" data-title="分立器件">数学</view>
+                <view class="left_item {{_id==21?'active':''}}" bindtap="change" data-id="21" data-title="分立器件">化学</view>
+                <view class="left_item {{_id==22?'active':''}}" bindtap="change" data-id="22" data-title="分立器件">工程技术</view>
+                <view class="left_item {{_id==23?'active':''}}" bindtap="change" data-id="23" data-title="分立器件">工程技术，焊接，资料地图，搜索</view>
+                <view class="left_item {{_id==24?'active':''}}" bindtap="change" data-id="24" data-title="分立器件">电路设计</view>
+                <view class="left_item {{_id==25?'active':''}}" bindtap="change" data-id="25" data-title="分立器件">系统设计</view>
+                <view class="left_item {{_id==26?'active':''}}" bindtap="change" data-id="26" data-title="分立器件">工程实际，买芯片，打样等</view>
+                <view class="left_item {{_id==27?'active':''}}" bindtap="change" data-id="27" data-title="分立器件">编程代码</view>
+                <view class="left_item {{_id==28?'active':''}}" bindtap="change" data-id="28" data-title="分立器件">开发工具</view>
+            </scroll-view>    
+        </view>
+        <view class="right">
+            <scroll-view scroll-y="true" style="height: {{height}}px">
+                <view class="title">{{title}}</view>
+                <view class="down">
+                    <block wx:for="{{all}}">
+                        <view class="content">      
+                            <image class="image" src="{{item.img}}"></image>
+                            <view class="name">{{item.name}}</view>
+                            <view class="describe">{{item.describe}}</view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>            
+        </view>
+    </view>
+</view>
